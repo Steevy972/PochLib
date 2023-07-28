@@ -1,0 +1,156 @@
+$couleurFond : azure;
+#boxImg{
+  text-align: left;
+  
+}
+#back{
+  position: absolute;
+  
+  z-index: -1;
+}
+
+body{
+  font-family: 'Belanosima', sans-serif;
+  max-width: 98vw;
+}
+  #myBooks{
+    text-align: center;
+    
+    .title{
+      background-color: grey;
+      margin: auto;
+      border-radius: 10px;
+    }
+    .h2{
+      margin-top: 50px;
+      div {
+        margin : 15px;
+      }
+      form{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        text-align: left;
+        .margin{
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
+      }
+      formButton{
+        display: flex;
+        justify-content: flex-start;
+        text-align: left;
+        flex-direction: column;
+        max-width: 100px;
+        margin : 10px;
+      }
+      
+        .buttonRouge{
+          font-family: 'Belanosima', sans-serif;
+          border-radius: 5px;
+          background-color: red;
+          color : white;
+          border :none;
+          padding: 5px;
+          margin: 5px;
+        }
+        
+      }
+    }
+    #content{
+       display: flex; 
+       flex-direction: column;
+       #sessionStorageBook{
+        order: 1;
+       }
+       h2{
+        order : 2;
+       }
+
+       #sessionStorageBook{
+        order: 3;
+       }
+
+       .displayBook{
+        max-width: 98vw;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        
+        
+      
+        element{
+          display: flex;
+          flex-direction: column;
+          margin: 10px;
+          text-align: left;
+         
+          padding: 20px;
+          background-color: $couleurFond;
+          border: solid 1px black;
+          
+          div{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            
+             
+              
+            button.fa.fa-trash {
+              background-color: $couleurFond;
+              border: none;
+              color: red;
+            }
+
+            button.fa-solid.fa-bookmark {
+              background-color: $couleurFond;
+              border: none;
+              color: green;
+            }
+          }
+          img{
+            max-width: 25vw;
+          }
+        }
+      }
+    }
+    
+
+    
+  .buttonVert{
+    font-family: 'Belanosima', sans-serif;
+    border-radius: 5px;
+    background-color: green;
+    color : white;
+    border: none;
+    padding: 5px;
+    margin: 5px;
+  }
+
+  @media only screen and (max-width: 600px){
+    #myBooks #content .displayBook {
+      
+      grid-template-columns: repeat(1,1fr);
+    }
+  }
+  @media only screen and (min-width : 600px) and (max-width: 1024px){
+    #myBooks #content .displayBook {
+      
+      grid-template-columns: repeat(2,1fr);
+    }
+  }
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
