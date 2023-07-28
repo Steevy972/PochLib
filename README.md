@@ -32,8 +32,7 @@ This project was created with Visual Studio Code :
 # Usage #
 
 1. Clone the repository: git clone https://github.com/Steevy972/PochLib.git
-
-2. Open the folder in Visual Studio Code or another text editor.
-3. Simply open the `index.html` file in your browser to launch the application.  
+2. To modify the application open the folder in Visual Studio Code or another text editor.
+3. To simply run the application open the `index.html` file in your browser to launch the application.  
 
 
