@@ -1,5 +1,22 @@
 createButtonAddBook();
 
+function createButtonAddBook() {
+    displayLogo()
+    displaySectionDisplaySessionStorageBook()
+    displaySessionStorage();
+    const button = createElement("button", "Ajouter un livre");
+    button.type = "button";
+    button.className = "buttonVert";
+    button.addEventListener("click", function () {
+        button.remove();
+        displaySectionDisplayBook()
+        createForm(createButtonSearchBook(), createCancelButton());    
+    });
+    let sectionForm = document.querySelector("h2");
+    const createButton = document.createElement("div");
+    sectionForm.appendChild(createButton);
+    createButton.appendChild(button);
+}
 
 function displayLogo(){
     const h1 = document.querySelector(".title")
@@ -19,24 +36,6 @@ function createElement(tag, text, type, name) {
     if (type) element.type = type;
     if (name) element.name = name;
     return element;
-}
-
-function createButtonAddBook() {
-    displayLogo()
-    displaySectionDisplaySessionStorageBook()
-    displaySessionStorage();
-    const button = createElement("button", "Ajouter un livre");
-    button.type = "button";
-    button.className = "buttonVert";
-    button.addEventListener("click", function () {
-        button.remove();
-        displaySectionDisplayBook()
-        createForm(createButtonSearchBook(), createCancelButton());    
-    });
-    let sectionForm = document.querySelector("h2");
-    const createButton = document.createElement("div");
-    sectionForm.appendChild(createButton);
-    createButton.appendChild(button);
 }
 
 function createButtonSearchBook() {
