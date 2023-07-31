@@ -58,14 +58,21 @@ function displayBook(book,isBookMark){
             BookManipulator.setBookSessionStorage(book);
         });
     }
-    
+    let bookDescription;
+    if(book.description === "Information manquante"){
+        bookDescription = book.description
+    }else{
+        bookDescription = book.description + "..."
+    }
     const id = createElement("p", "Id : " + book.id);
     const title = createElement("p", "Titre : " + book.title);
     const authors = createElement("p", "Auteur : " + book.authors[0]);
-    const description = createElement("p", "Description : " + book.description);
+    const description = createElement("p", "Description : " + bookDescription);
     const image = createElement("img");
     image.src = book.image
     const myDiv = document.createElement("div");
+    const boxImage = document.createElement("div")
+    boxImage.id = "centerImage"
     
     parentElement.appendChild(element);
     element.appendChild(myDiv)
@@ -74,8 +81,8 @@ function displayBook(book,isBookMark){
     element.appendChild(id);
     element.appendChild(authors);
     element.appendChild(description);
-    element.appendChild(image);
-
+    element.appendChild(boxImage)
+    boxImage.appendChild(image);
 }
 
 function displaySectionDisplayBook(){
@@ -84,8 +91,7 @@ function displaySectionDisplayBook(){
     sectionDisplayBook.className = "displayBook";
     sectionDisplayBook.id = "displayBook"
     
-    content.appendChild(sectionDisplayBook);
-    
+    content.appendChild(sectionDisplayBook);    
 }
 
 function displaySectionDisplaySessionStorageBook(){
