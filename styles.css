@@ -58,7 +58,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-#content #sessionStorageBook {
+#content #displayBook {
   order: 1;
 }
 #content h2 {
