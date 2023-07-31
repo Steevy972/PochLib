@@ -96,6 +96,9 @@ body {
   border: none;
   color: green;
 }
+#content .displayBook element #centerImage {
+  justify-content: center;
+}
 #content .displayBook element img {
   max-width: 25vw;
 }
