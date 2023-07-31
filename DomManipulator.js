@@ -1,9 +1,9 @@
 createButtonAddBook();
+displaySectionDisplaySessionStorageBook()
+displaySessionStorage();
 
 function createButtonAddBook() {
     displayLogo()
-    displaySectionDisplaySessionStorageBook()
-    displaySessionStorage();
     const button = createElement("button", "Ajouter un livre");
     button.type = "button";
     button.className = "buttonVert";
